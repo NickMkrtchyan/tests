@@ -214,3 +214,4 @@ function make_registration_date_column_sortable($columns) {
     $columns['registration_date'] = 'user_registered';
     return $columns;
 }
+

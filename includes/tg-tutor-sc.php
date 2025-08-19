@@ -8,16 +8,16 @@ add_shortcode('telegram_access_all_buttons', function () {
 
     // ID продуктов и Telegram-группы
     $product_groups = [
-        // 530 => [
-        //     'title' => 'Mommy Challenge',
-        //     'url'   => 'https://t.me/+Ypvi3gTfmqRmNGYy',
-        //     'page_id' => 489
+        // 3468 => [
+        //     'title' => 'Facebuilding V1',
+        //     'url'   => 'https://t.me/',
+        //     'page_id' => 3445
         // ],
-        2145 => [
-            'title' => 'New Body Marathon',
-            'url'   => 'https://t.me/+ZCYwfOwfzNNkNmQy',
-            'page_id' => 2121
-        ],
+        // 2145 => [
+        //     'title' => 'New Body Marathon',
+        //     'url'   => 'https://t.me/+ZCYwfOwfzNNkNmQy',
+        //     'page_id' => 2121
+        // ],
     ];
 
     $user_product_ids = [];

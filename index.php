@@ -1,22 +1,20 @@
 <?php
 /**
- * Plugin Name: My Custom Functions
- * Description: Хранилище кастомных функций для сайта.
- * Author: Nick Mkrtchyan
- * Version: 1.0
+ * Plugin Name: RankUP Custom Functions
+ * Description: Набор кастомных функций и интеграций для WooCommerce, Tutor LMS и Telegram. Рефактор от RankUP: объединены схожие модули, единые префиксы и структура.
+ * Author: RankUP
+ * Version: 2.0.0
+ * Requires at least: 6.0
+ * Requires PHP: 7.4
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit;
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-// Автозагрузка всех PHP-файлов в папке includes
+// Автозагрузка всех PHP-файлов из папки includes (как и было ранее)
 $includes_dir = plugin_dir_path( __FILE__ ) . 'includes/';
 foreach ( glob( $includes_dir . '*.php' ) as $file ) {
     require_once $file;
 }
 
-function allow_json_uploads($mimes) {
-    // Add JSON file support
-    $mimes['json'] = 'application/json';
-    return $mimes;
-}
-add_filter('upload_mimes', 'allow_json_uploads');
+// Разрешаем загрузку JSON-файлов
+add_filter('upload_mimes', function($m) { $m['json'] = 'application/json'; return $m; });

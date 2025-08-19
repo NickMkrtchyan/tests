@@ -60,7 +60,7 @@ function render_woodash_page() {
                           <option value="0">Все продукты</option>
                           <?php
                           $products = get_woocommerce_products_for_filter();
-                          $preselected_product_id = 2145;
+                          $preselected_product_id = 3468;
 
                           foreach ($products as $product_id => $product_name) {
                               $selected_attr = ($product_id == $preselected_product_id) ? ' selected' : '';
